@@ -1,7 +1,10 @@
 ---
 title: AtCoder Beginner Contest 377
 date: 2024年11月27日 22:35:48
+categories:
+- AtCoder刷题
 tags:
+- AtCoder
 ---
 
 # AtCoder Beginner Contest 377

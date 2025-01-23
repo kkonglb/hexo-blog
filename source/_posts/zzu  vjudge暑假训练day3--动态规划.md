@@ -1,7 +1,10 @@
 ---
 title: zzu  vjudge暑假训练day3--动态规划
 date: 2024年11月27日 22:35:05
+categories:
+- 刷题
 tags:
+- 刷题
 ---
 
 # zzu  vjudge暑假训练day3--动态规划

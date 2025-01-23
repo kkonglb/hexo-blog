@@ -1,7 +1,10 @@
 ---
 title: Codeforces Round 984 (Div. 3)
 date: 2024年11月27日 22:35:37
+categories:
+- Codeforces刷题
 tags:
+- Codeforces刷题
 ---
 
 # [Codeforces Round 984 (Div. 3)](https://codeforces.com/contest/2036)

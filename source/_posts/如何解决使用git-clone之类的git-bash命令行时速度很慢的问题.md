@@ -1,7 +1,10 @@
 ---
 title: 如何解决使用git clone之类的git bash命令行时速度很慢的问题
 date: 2024-12-01 10:29:49
-tags: git
+categories:
+- 技能学习
+tags:
+- git
 ---
 
 # 出现的问题
@@ -20,13 +23,13 @@ tags: git
 
 在设置里搜索 代理 找到自己的这两项（前提是自己必须有代理），在代理中其实也可以直接找到这个端口，应该设置里面都有，可以自己看一下。
 
-![image-20241201103720668](https://cdn.jsdelivr.net/gh/kkonglb/image/image-20241201103720668.png)
+![img](./image-20241201103720668.png)
 
 总结一下就是我们上面输入的命令行操作其实就是为了修改[用户目录].gitconfig中的内容。
 
 可以直接`cat ~/.gitconfig`看看成功了没	
 
-![image-20241201111140246](https://cdn.jsdelivr.net/gh/kkonglb/image/image-20241201111140246.png)
+![image-20250121214715901](./image-20250121214715901.png)
 
 看来是成功了，那个lowspeedlimit和lowspeedtime不用管，忘了是什么时候设置的了。
 

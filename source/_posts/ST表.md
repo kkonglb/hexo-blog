@@ -1,7 +1,10 @@
 ---
 title: ST表
 date: 2024年11月27日 22:35:13
+categories:
+- 算法
 tags:
+- 算法
 ---
 
 # ST表
@@ -18,9 +21,9 @@ RMQ 是英文 Range Maximum/Minimum Query 的缩写，表示区间最大（最�
 
 [https://www.luogu.com.cn/problem/P3865](https://www.luogu.com.cn/problem/P3865)
 
-![](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20241012151116609.png)
+![img](./image-20241012151116609.png)
 
-![image-20241012151321753](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20241012151321753.png)
+![img](./image-20241012151321753.png)
 
 ```cpp
 #include<bits/stdc++.h>
@@ -84,7 +87,6 @@ using ll = long long;
 using u64 = unsigned long long;
 const int inf = 2147483647;
 const ll INF = 1e18;
-
 signed main()
 {
     ios::sync_with_stdio(false);
@@ -207,6 +209,46 @@ signed main()
         int ret=max(dp1[l][k],dp1[r-(1<<k)+1][k])-min(dp2[l][k],dp2[r-(1<<k)+1][k]);
         cout<<ret<<'\n';
     }    
+
+    return 0;    
+}
+```
+
+## ST表
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+using u32 = unsigned;
+#define i128 __int128;
+using ll = long long;
+#define int ll
+using u64 = unsigned long long;
+const int inf = 2147483647;
+const ll INF = 1e18;
+
+signed main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n,m;
+    cin>>n>>m;
+    vector<vector<int>>dp(n+1,vector<int>(22));
+    for(int i=1;i<=n;i++)cin>>dp[i][0];
+    for(int len=1;len<=20;len++)
+    {
+        for(int i=1;(i+(1<<len)-1)<=n;i++)
+        {
+            dp[i][len]=max(dp[i][len-1],dp[i+(1<<(len-1))][len-1]);
+        }
+    }
+    for(int i=1;i<=m;i++)
+    {
+        int l,r;
+        cin>>l>>r;
+        int k=log2(r-l+1);
+        cout<<max(dp[l][k],dp[r-(1<<k)+1][k])<<'\n';
+    }
 
     return 0;    
 }

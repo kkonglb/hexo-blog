@@ -160,6 +160,10 @@ cover:
     - image/DM_20241129182446_007.jpg
     - image/DM_20241129182446_008.jpg
     - image/DM_20241129182446_009.jpg
+    - image/DM_20241129182446_010.jpg
+    - image/DM_20241129182446_011.jpg
+    
+
 
 # 替换损坏的图片
 error_img:
@@ -238,7 +242,7 @@ subtitle:
   source: 1
   # 如果关闭打字机效果，副标题将仅显示 sub 的第一行内容
   sub:
-    - "Welcome to konglb's Home!🥳🥳🥳"
+    - "Welcome to konglb's Blog!🥳🥳🥳"
     - "Hope you have a nice day!🍭🍭🍭"
 
 # 首页文章佈局
@@ -398,7 +402,7 @@ aside:
     # 是否显示公告卡片
     enable: true
     # 公告内容
-    content: This is  Blog
+    content: 我深怕自己本非美玉，故而不敢加以刻苦琢磨，却又半信自己是块美玉，故又不肯庸庸碌碌，与瓦砾为伍。于是我渐渐地脱离凡尘，疏远世人，结果便是一任愤懑与羞恨日益助长内心那怯弱的自尊心。——中岛敦《山月记》
   card_recent_post:
     # 是否显示最近文章卡片
     enable: true
@@ -610,7 +614,7 @@ math:
 search:
   # 选择：algolia_search / local_search / docsearch
   # 如果不需要搜索功能，保持为空
-  use:
+  use: local_search
   placeholder:
 
   # Algolia Search
@@ -622,7 +626,7 @@ search:
   local_search:
     enable: true
     # 页面加载时预加载搜索数据
-    preload: false
+    preload: true
     # 每篇文章显示的顶部 n 个搜索结果，设置为 -1 显示所有结果
     top_n_per_article: 1
     # 将 HTML 字符串反转义为可读内容
@@ -1288,12 +1292,19 @@ Open_Graph_meta:
 # 是否启用 CSS 前缀
 css_prefix: true
 
+
+
+
+
 # Inject
 # 插入代码到 head（在 '</head>' 标签之前）和底部（在 '</body>' 标签之前）
 inject:
   head:
     - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
+    #- <link rel="stylesheet" href="/css/universe.css">
   bottom:
+    #- <canvas id="universe"></canvas>
+    #- <script defer src="/js/universe.js"></script>
     # - <script src="xxxx"></script>
 
 # CDN 设置
@@ -1370,3 +1381,42 @@ CDN:
     # valine:
     # waline_css:
     # waline_js:
+
+# electric_clock (安知鱼电子钟)
+# see https://anzhiy.cn/posts/fc18.html
+# electric_clock:
+#   enable: true # 开关
+#   priority: 5 #过滤器优先权
+#   enable_page: / # 应用页面
+#   exclude:
+#     # - /posts/
+#     # - /about/
+#   layout: # 挂载容器类型
+#     type: class
+#     name: sticky_layout
+#     index: 0
+#   loading: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif #加载动画自定义
+#   clock_css: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css
+#   clock_js: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js
+#   ip_api: https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0
+#   qweather_key:  # 和风天气key
+#   gaud_map_key:  # 高得地图web服务key
+#   default_rectangle: false # 开启后将一直显示rectangle位置的天气，否则将获取访问者的地理位置与天气
+#   rectangle: 113.34532,23.15624 # 获取访问者位置失败时会显示该位置的天气，同时该位置为开启default_rectangle后的位置
+
+# electric_clock
+# see https://akilar.top/posts/4e39cf4a/
+# electric_clock:
+#   enable: true # 开关
+#   priority: 5 #过滤器优先权
+#   enable_page: all # 应用页面
+#   exclude:
+#     # - /posts/
+#     # - /about/
+#   layout: # 挂载容器类型
+#     type: class
+#     name: sticky_layout
+#     index: 0
+#   loading: /img/loading.gif #加载动画自定义
+
+

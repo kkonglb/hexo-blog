@@ -1,7 +1,10 @@
 ---
 title: zzu vjudge暑假训练day5:图论基础
 date: 2024年11月27日 22:34:54
+categories:
+- 刷题
 tags:
+- 刷题
 ---
 
 # zzu vjudge暑假训练day5:图论基础
