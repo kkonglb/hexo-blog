@@ -105,7 +105,7 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: "git"
-  repo: https://github.com/kkonglb/kkonglb.github.io.git
+  repo: git@github.com:kkonglb/kkonglb.github.io.git
   branch: main
 ## 本地搜索
 search:
