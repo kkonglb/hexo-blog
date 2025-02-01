@@ -1,7 +1,10 @@
 ---
 title: 如何在一台电脑上用ssh链接多个github账号
 date: 2025-01-24 11:13:27
-tags: 
+categories:
+- 技能积累
+tags:
+- 
 ---
 
 [使用多个 SSH 密钥 - 初学者友好型](https://gist.github.com/aprilmintacpineda/f101bf5fd34f1e6664497cf4b9b9345f)
@@ -13,3 +16,12 @@ tags:
 我最后的解决方案是把默认的也改了一下名字![image-20250124131939622](./image-20250124131939622.png)
 
 两个分别改成了id_rsa_personal和id_rsa_new
+
+好像是每次都得重新添加一下ssh-agent进程，比如
+
+```bash
+ssh-agent bash
+ssh-add ~/.ssh/id_rsa_personal
+ssh-add ~/.ssh/id_rsa_new
+```
+

@@ -4,7 +4,7 @@ date: 2025-01-19 12:20:20
 tags:
 - vscode
 categories:
-- 软件技巧整理
+- vscode
 ---
 
 # 如果关闭开启vscode代码提示

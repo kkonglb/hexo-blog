@@ -2,10 +2,18 @@
 title: hexo博客搭建
 date: 2024-11-17 23:34:32
 categories:
-- 技能学习
+- 技能积累
 tags:
 - hexo
 ---
+
+[hexo](https://github.com/hexojs/hexo)
+
+[hexo文档](https://hexo.io/zh-cn/docs/index.html)
+
+[butterfly](https://github.com/jerryc127/hexo-theme-butterfly)
+
+[butterfly文档](https://butterfly.js.org/)
 
 # hexo博客搭建
 

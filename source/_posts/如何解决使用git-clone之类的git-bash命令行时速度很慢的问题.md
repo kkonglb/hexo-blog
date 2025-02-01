@@ -2,7 +2,7 @@
 title: 如何解决使用git clone之类的git bash命令行时速度很慢的问题
 date: 2024-12-01 10:29:49
 categories:
-- 技能学习
+- 技能积累
 tags:
 - git
 ---

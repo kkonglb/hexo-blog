@@ -2,7 +2,7 @@
 title: 区间DP
 date: 2024年11月27日 22:32:47
 categories:
-- 算法学习
+- 动态规划
 tags:
 - 算法
 ---
