@@ -19,6 +19,8 @@ tags:
 
 [在windows中如何查看代理的地址和端口](https://blog.csdn.net/qq_55888300/article/details/131498092)
 
+[设置代理解决github被墙](https://zhuanlan.zhihu.com/p/481574024)
+
 看代理IP地址和端口这样也可以
 
 在设置里搜索 代理 找到自己的这两项（前提是自己必须有代理），在代理中其实也可以直接找到这个端口，应该设置里面都有，可以自己看一下。

@@ -19,11 +19,11 @@ tags:
 
 Markdown 段落没有特殊的格式，直接编写文字就好，**段落的换行是使用两个以上空格加上回车**。
 
-![img](markdown重新复习整理要点/36A89BDA-A062-4D66-A41B-0EBEE7891AB9.jpg)
+![img](./36A89BDA-A062-4D66-A41B-0EBEE7891AB9.jpg)
 
 当然也可以在段落后面使用一个空行来表示重新开始一个段落。
 
-![img](markdown重新复习整理要点/3F254936-778E-417A-BEF2-467116A55D00.jpg)
+![img](./3F254936-778E-417A-BEF2-467116A55D00.jpg)
 
 不过对于typora来说,默认就是<kbd>enter</kbd>就是开启一个新段落，使用<kbd>shifit</kbd> +<kbd>enter</kbd>是换行
 
@@ -51,7 +51,7 @@ ___粗斜体文本___
 
 演示效果如下：
 
-![img](markdown重新复习整理要点/md5.gif)
+![img](./md5.gif)
 
 ## Markdown 列表
 
@@ -75,7 +75,7 @@ Markdown 区块引用是在段落开头使用 **>** 符号 ，然后后面紧跟
 
 显示结果如下：
 
-![img](markdown重新复习整理要点/DFE1124E-BC38-4C12-B7AC-053E560D4C9C-1738334716233-24.jpg)
+![img](./DFE1124E-BC38-4C12-B7AC-053E560D4C9C-1738334716233-24.jpg)
 
 另外区块是可以嵌套的，一个 **>** 符号是最外层，两个 **>** 符号是第一层嵌套，以此类推：
 
@@ -87,7 +87,7 @@ Markdown 区块引用是在段落开头使用 **>** 符号 ，然后后面紧跟
 
 显示结果如下：
 
-![img](markdown重新复习整理要点/AA0A4A6A-33A7-48C7-971F-73FFC8FE85B0-1738334716234-27.jpg)
+![img](./AA0A4A6A-33A7-48C7-971F-73FFC8FE85B0-1738334716234-27.jpg)
 
 ### 区块中使用列表
 
@@ -104,7 +104,7 @@ Markdown 区块引用是在段落开头使用 **>** 符号 ，然后后面紧跟
 
 显示结果如下：
 
-![img](markdown重新复习整理要点/E3BF6399-6483-4C7A-8502-AE75E8D66C96.jpg)
+![img](./E3BF6399-6483-4C7A-8502-AE75E8D66C96.jpg)
 
 ### 列表中使用区块
 
@@ -121,7 +121,7 @@ Markdown 区块引用是在段落开头使用 **>** 符号 ，然后后面紧跟
 
 显示结果如下：
 
-![img](markdown重新复习整理要点/1B894FB4-53AC-4E2D-BA30-F4AE4DFA8B97.jpg)
+![img](./1B894FB4-53AC-4E2D-BA30-F4AE4DFA8B97.jpg)
 
 - >
 
@@ -138,7 +138,7 @@ Markdown 区块引用是在段落开头使用 **>** 符号 ，然后后面紧跟
 
 显示结果如下：
 
-![img](markdown重新复习整理要点/C928FDA3-E0A7-4AFF-AB2A-B3AF44F93DF9.jpg)
+![img](./C928FDA3-E0A7-4AFF-AB2A-B3AF44F93DF9.jpg)
 
 你也可以用 **```** 包裹一段代码，并指定一种语言（也可以不指定）：
 
@@ -152,7 +152,7 @@ $(document).ready(function () {
 
 显示结果如下：
 
-![img](markdown重新复习整理要点/88F52386-2F98-4D7E-8935-E43BECA6D868.jpg)
+![img](./88F52386-2F98-4D7E-8935-E43BECA6D868.jpg)
 
 ## Markdown 链接
 
@@ -174,7 +174,7 @@ $(document).ready(function () {
 
 显示结果如下：
 
-![img](markdown重新复习整理要点/49E6CB42-F780-4DA6-8290-DC757B51FB9A.jpg)
+![img](./49E6CB42-F780-4DA6-8290-DC757B51FB9A.jpg)
 
 直接使用链接地址：
 
@@ -184,7 +184,7 @@ $(document).ready(function () {
 
 显示结果如下：
 
-![img](markdown重新复习整理要点/9BFF60A1-DD71-4B63-987B-4665B31C7787.jpg)
+![img](./9BFF60A1-DD71-4B63-987B-4665B31C7787.jpg)
 
 ### 高级链接
 
@@ -201,7 +201,7 @@ $(document).ready(function () {
 
 显示结果如下：
 
-![img](markdown重新复习整理要点/EC3ED5D2-4F0D-492A-81B3-D485623D1A9E.jpg)
+![img](./EC3ED5D2-4F0D-492A-81B3-D485623D1A9E.jpg)
 
 ## Markdown 图片
 
@@ -223,4 +223,4 @@ $(document).ready(function () {
 
 输出结果为：
 
-![img](markdown重新复习整理要点/81999271-F914-428D-B7BF-164BDC67CAAC.jpg)
+![img](./81999271-F914-428D-B7BF-164BDC67CAAC.jpg)
