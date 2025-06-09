@@ -21,9 +21,9 @@ RMQ 是英文 Range Maximum/Minimum Query 的缩写，表示区间最大（最�
 
 [https://www.luogu.com.cn/problem/P3865](https://www.luogu.com.cn/problem/P3865)
 
-![img](./image-20241012151116609.png)
+![img](ST表/image-20241012151116609.png)
 
-![img](./image-20241012151321753.png)
+![img](ST表/image-20241012151321753.png)
 
 ```cpp
 #include<bits/stdc++.h>
