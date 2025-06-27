@@ -1,5 +1,5 @@
 ---
-title: java期末复习
+  title: java期末复习
 tags:
   - 技能积累
 categories:
@@ -7,7 +7,7 @@ categories:
 date: 2025-06-10 20:35:39
 ---
 
- --------![293abb4497680c2842af49faf516971](java期末复习/293abb4497680c2842af49faf516971.png)
+ -----![293abb4497680c2842af49faf516971](java期末复习/293abb4497680c2842af49faf516971.png)
 
 ## 第1章 Java语言基础知识
 
@@ -112,6 +112,12 @@ static（静态的） 无static：实例变量  有static 类变量（静态变�
 
 ​                               <类型|实例名> . <类变量名>                 
 
+
+
+
+
+静态方法只能访问该类的静态方法和静态成员，因为静态方法创建时间很早。
+
 ### 包的概念
 
  java编译器为==每一个类==生成一个字节码文件（.class），同名的类可能发生冲突，所以应该将相关的类组织到同一个包（package）中，
@@ -150,7 +156,7 @@ static double maxArea(Circle... c,Rectangle... varRec)
 // 错误，一个方法参数里面只能有一个可变长参数。
 ```
 
-#### java命名
+#### java命名*
 
 java中包名用小写字母表示 ，类名的第一个字母使用大写。
 
@@ -164,7 +170,7 @@ java中包名用小写字母表示 ，类名的第一个字母使用大写。
 
 覆盖：如果子类不需要从超类继承过来的方法，则可以声明自己的方法。声明的过程中用同样的方法名和参数表，但执行不同的功能，这种情况称为方法覆盖。
 
-### Object类
+### Object类（相等和同一）
 
 类库：Java的类库是系统提供的已实现的标准类的集合，是Java编程的API，这些类根据功能不同可以划分成不同的集合（包），合在一起就是类库。
 
@@ -245,7 +251,13 @@ public abstract<returnTyper><methodName>(...);//
 
 Math.random()  //返回大于或等于0.0且小于1.0的double类型的数据。
 
-### 包的结构，创建引用（P113）
+```java
+n=(int)(Math.random{}*3)//随机0,1,2
+```
+
+
+
+### 包的结构，创建引用（P113）（看书）
 
 
 
@@ -293,9 +305,9 @@ Math.random()  //返回大于或等于0.0且小于1.0的double类型的数据。
 
 我觉得抽象类的继承主要是为了说明这个子类是属于哪一种东西，比如Rectangle，Circle都属于Shape（形状）这一类中，但是接口的实现是为了说明这些类中有哪一些属性。
 
-### 什么是多态（P138）
+### 什么是多态（P138）（看书）
 
-
+不同的对象可以处理相同的信息，但是会产生不同的结果，所有对象都可以类型转换成他的超类，所以所有的类都可以转换成Object，所有的类都可以正确响应toString()方法。
 
 ## 第5章 异常处理与输入输出流
 
@@ -308,6 +320,8 @@ Math.random()  //返回大于或等于0.0且小于1.0的double类型的数据。
 ​	Java中声明了很多异常类，每一种异常都代表了一种运行错误，类中包含了该异常的信息和处理异常的方法等内容。每当Java程序运行过程中发生了一个可识别的运行错误（即有一个异常类与该错误相对应时），系统就会产生一个相应的该异常类的对象，然后采取相应的机制来处理他，确保不会对操作系统产生损害。
 
 ​	我们把生成异常对象并提交给运行系统的过程称为抛出（throw）一个异常。
+
+![image-20250619181133253](java期末复习/image-20250619181133253.png)
 
 ### 异常分类（P154）
 
@@ -324,7 +338,7 @@ Math.random()  //返回大于或等于0.0且小于1.0的double类型的数据。
   - **不强制要求**用`try-catch`捕获。
   - **不强制要求**在方法签名中用`throws`声明。
 
-- 检查型异常
+- 检查型异常（编译时异常）
 
 ### 抛出，捕获异常（P155）
 
@@ -409,10 +423,7 @@ boolean containsKey(Object key)
 boolean contains(Object value) //这个和下面那个都是判断value在不在
 boolean containsValue(Object value)
 void clear()
-
 ```
-
-
 
 ### 遍历：for循环，迭代器
 
@@ -661,6 +672,66 @@ synchronized(对象){代码段}
 
 ## 杂项
 
+```java
+// 读入int整数
+Scanner scanner =new Scanner(System.in);
+int x=scanner.nextInt();
+
+//最大值函数，用Math.max()
+int max = Math.max(Math.max(x, y), z);
+
+
+//  java中的排序
+int[] numbers = {5, 2, 9, 1, 5, 6};  
+// 升序排序（类似C++的sort）
+Arrays.sort(numbers);
+//对于List和Vector这种使用
+Collections.sort(vec);
+System.out.println(Arrays.toString(numbers)); // [1, 2, 5, 5, 6, 9]
+Arrays.sort(numbers2, (a, b) -> b - a); // 使用Comparator
+
+
+Iterator<Map.Entry<String,String>it=map.entrySet().iterator();	//迭代器，感觉和pair差不多
+// 遍历整个map
+for(Map.Entry<String,String>entry:map.entrySet())
+{
+    
+}
+// 遍历整个map的值
+for(String v:map.values())
+{
+    System.out.println("value= "+v);
+}
+
+
+// 加载驱动程序
+try{
+    Class.forName("com.mysql.jdbc.Driver");
+}catch(ClassNotFoundException e)
+{
+    e.printStackTrace();
+}
+
+
+for(auto int[]a:myArray)
+{
+    for(int i:a)
+    {
+        total+=i;
+    }
+}
+```
+
+
+
+- 字符串用equals比较
+- Integer.parseInt()将字符串转换成Int。
+- 好像toString这种多个单词的第一个字母是小写
+- return {grade+" account #"+accountNumber+"with balance $"+balance};直接用花括号返回字符串（字符串遇到其他数据类型默认直接转换成字符串}
+- Scanner在java.util中
+- ![image-20250619181523903](java期末复习/image-20250619181523903.png)子类==不能==从父类中==继承==构造方法，但是默认会在自身构造方法第一行中调用
+- 静态导入静态成员或者静态方法。import static java.lang.Math.PI;
+
 ### 方法重载（P56）和重写
 
 ### 注解（P67）
@@ -679,5 +750,413 @@ synchronized(对象){代码段}
 
 一般好像都是上转型。
 
+对象好像就是个引用，所以根本谈不上类型转换，如Object a=new Car(),就是让Object类型的a指向了一个Car。
+
 ### Java中的值传递
+
+### 输入
+
+```java
+Scanner input =new Scanner(System.in);
+String abb=input.nextline();
+```
+
+### 捕获异常情况
+
+```java
+// 捕获睡眠异常
+try{
+    System.out.println();
+    Thread.sleep(sleepTime);
+}catch(InterruptedException exception){}
+
+
+// 加载驱动程序
+try{
+    Class.forName("com.mysql.jdbc.Driver");
+}catch(ClassNotFoundException e)
+{
+    e.printStackTrace();
+}
+```
+
+![image-20250619205219564](java期末复习/image-20250619205219564.png)
+
+### 数组实用方法
+
+```java
+Arrays.sort(type[] a)
+Arrays.binarySearch()
+Arrays.asList(Object[]a)
+```
+
+### 函数式接口和Lambda表达式
+
+正常的函数式接口想要实例化的话需要用一个类来implements这个接口，然后创建一个对象，最后调用这个方法才行。
+
+```java
+interface FunctionalInterfaceExample1{
+    void theOnlyAbstractMethond();
+}
+
+
+FunctionalInterfaceExample1 lambda=()->System.out.println("Hello\n");
+lambda.theOnlyAbstractMethod();
+```
+
+### hashcode（快看）
+
+### 抽象方法
+
+```java
+public abstract it1();//不能有大括号
+```
+
+### equals必须要类型转换
+
+```java
+public boolean equals(Object x)
+{
+    if(this.getClass()!=x.getClass())
+    {
+        return false
+    }
+    BankAccount b=(BankAccount)x;
+    return (this.getAccountNumber()==b.getAccountNumber());
+}
+```
+
+```java
+public class test{
+  	public static void main(String args[]){
+    	try{
+    		              (“com.mysql.jdbc.Driver”);
+    		Connection con=DriverManager.getConnection(”jdbc:mysql://localhost:3306/mydatabase”,“zyt”, “pd12345”);
+     		Statement s=con.createStament()；
+     		ResultSet result=_s.executeQuery("SELECT * FROM Student")_______;
+     		while(result.next()){ 
+System.out.println(_rs.getString("id,name,sex")________________);
+System.out.println(____________________________________________);
+System.out.println(____________________________________________); }
+     		s.close(); 
+            ;
+} catch(Exception e)
+{ System.out.println(e);}
+}//end of main
+}//end of class test       
+```
+
+
+
+## 课后习题
+
+### 第1章
+
+```java
+// 最大公约数
+public static int gcd(int a, int b) {
+    if (b == 0) {
+        return Math.abs(a);
+    }
+    return gcd(b, a % b);
+}
+// 最小公倍数
+public static int lcm(int a, int b) {
+    // 避免除数为0
+    if (a == 0 || b == 0) {
+        return 0;
+    }
+    return Math.abs(a * b) / gcd(a, b);
+}
+```
+
+类的访问控制符有两种，public和无修饰符（package-private）
+
+类成员有4个，public，private，protected和无修饰符
+
+#### 构造方法特点
+
+- 方法名和类名相同
+- 没有返回类型（包括void）
+- 一般声明为共有的（public）
+- 可以有任意多个参数
+- 主要工作是完成对象的初始化工作
+- 不能在程序中显式的调用
+
+
+
+#### 声明toString方法
+
+```java
+// 这两个是等价的，直接输出对象就是调用toString()
+System.out.println(anAccount);
+System.out.println(anAccount.toString());
+
+@Override
+public String toString()
+{
+    return {grade+" account #"+accountNumber+"with balance $"+balance};
+}
+```
+
+#### this 和 super
+
+![image-20250619160005961](java期末复习/image-20250619160005961.png)
+
+其中，使用this和super调用变量和方法都是this.x和this.getter()，但是构造方法就是this(1,2)；
+
+## 图形用户界面
+
+```java
+package final1;
+import java.awt.event.*;
+
+
+import javax.swing.*;
+
+public class Jdialog {
+    public static void main(String[]args)
+    {
+        new myFrame();
+    }
+}
+class myFrame extends JFrame
+{
+    int x=1;
+
+    private JLabel lab =new JLabel("请输入姓名");
+    private JTextField tf=new JTextField(10);
+    private JButton but=new JButton("确定");
+    private JPanel pan =new JPanel();
+    private JFrame thisFrame;
+
+    public myFrame(){
+        thisFrame=this;
+        this.setTitle("自定义的JFrame窗口");
+        this.setBounds(600,500,300,250);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        initialize();
+        this.setVisible(true);
+    }
+    public void initialize(){
+        pan.add(lab);
+        pan.add(tf);
+        pan.add(but);
+        this.add(pan);
+        but.addActionListener(new ActionListener() {//按钮动作事件处理
+            public void actionPerformed(ActionEvent e) {
+                //构造并显示JDialog对话框
+                JDialog dialog = new JDialog(thisFrame, "JDialog对话框");
+                dialog.setModalityType(JDialog.ModalityType.APPLICATION_MODAL);// 设置dialog为程序级模态对话框，只有关闭这个dialog才能操作Jframes
+                dialog.setBounds(650, 600, 200, 150);
+                dialog.add(new JLabel(tf.getText() + "，您好！"));
+                dialog.setVisible(true);
+            }
+        });
+    }
+
+}
+```
+
+```java
+package test8;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class choose {
+    public static void main(String[] args)throws Exception {
+        //编写主窗口
+        JFrame f = new JFrame("关于单选按钮");
+        f.setLayout(null); // 使用绝对定位布局
+        //f.setTitle("单选程序");
+        f.setSize(450, 150);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JLabel txt = new JLabel("将来要当：");
+        txt.setLocation(10,10);
+        txt.setSize(100,30);
+        f.add(txt);
+        JRadioButton choose1=new JRadioButton("经理",false);
+        JRadioButton choose2=new JRadioButton("工程师",false);
+        JRadioButton choose3=new JRadioButton("教师",false);
+        choose1.setLocation(80, 10);
+        choose1.setSize(110, 30);
+        choose2.setLocation(200, 10);
+        choose2.setSize(100, 30);
+        choose3.setLocation(310, 10);
+        choose3.setSize(100, 30);
+
+
+        f.add(choose1);
+        f.add(choose2);
+        f.add(choose3);
+
+        JLabel out = new JLabel("您选择了将来要当：");
+        out.setSize(200,50);
+        out.setLocation(50,50);
+        f.add(out);
+        choose1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(choose1.isSelected()){
+                    out.setText("您选择了将来要当：经理");
+                }
+            }
+        });
+        choose2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(choose2.isSelected()){
+                    out.setText("您选择了将来要当：工程师");
+                }
+            }
+        });
+        choose3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(choose3.isSelected()){
+                    out.setText("您选择了将来要当：教师");
+                }
+            }
+        });
+        f.setVisible(true);
+    }
+}
+
+```
+
+```java
+package test9;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+public class check {
+    public static void main(String [] args){
+        JFrame window = new JFrame();
+        window.setLayout(null);
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setTitle("关于复选框");
+        //Jpanel window = new Jpanel();
+        window.setSize(300,150);
+        JLabel txt = new JLabel("爱好选择：");
+        txt.setLocation(10,10);
+        txt.setSize(80,30);
+        window.add(txt);
+        JCheckBox c1=new JCheckBox("音乐",false);
+        JCheckBox c2=new JCheckBox("运动",false);
+        JCheckBox c3=new JCheckBox("上网",false);
+        JLabel txt2 = new JLabel("您选择了：");
+        c1.setLocation(80,10);
+        c1.setSize(60,30);
+        c2.setLocation(150,10);
+        c2.setSize(60,30);
+        c3.setLocation(220,10);
+        c3.setSize(60,30);
+        window.add(c1);
+        window.add(c2);
+        window.add(c3);
+
+        c1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String str = "您的爱好是：";
+                if(c1.isSelected()){
+                    str += " " + "音乐";
+                }
+                if(c2.isSelected()){
+                    str += " " + "运动";
+                }
+                if(c3.isSelected()){
+                    str += " " + "上网";
+                }
+                txt2.setText(str);
+
+            }
+        });
+        c2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String str = "您的爱好是：";
+                if(c1.isSelected()){
+                    str += " " + "音乐";
+                }
+                if(c2.isSelected()){
+                    str += " " + "运动";
+                }
+                if(c3.isSelected()){
+                    str += " " + "上网";
+                }
+                txt2.setText(str);
+
+            }
+        });
+        c3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String str = "您的爱好是：";
+                if(c1.isSelected()){
+                    str += " " + "音乐";
+                }
+                if(c2.isSelected()){
+                    str += " " + "运动";
+                }
+                if(c3.isSelected()){
+                    str += " " + "上网";
+                }
+                txt2.setText(str);
+            }
+        });
+        txt2.setLocation(60,60);
+        txt2.setSize(200,30);
+        window.add(txt2);
+        window.setVisible(true);
+    }
+}
+
+
+```
+
+
+
+## 考前必看
+
+- 使用的Reader和Writer使用完都要关闭  out.close(),in.close();
+
+- ```java
+  Collections.sort(v,(e1,e2)->e1.getKey().compareTo (e2.getKey()));//排序
+  ```
+
+- 图形化界面导入包`import javax.swing.*` `import java.awt.event.*` 
+
+- 集合框架要导入`import java.util.*`
+
+- 数学之类的都要Math.PI
+
+- 记得图形化界面要`it.setVisible(true);`
+
+```java
+this.setBounds(600,500,300,250);
+this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+but.addActionListener(new ActionListener() {//按钮动作事件处理
+public void actionPerformed(ActionEvent e) {
+    //构造并显示JDialog对话框
+    JDialog dialog = new JDialog(thisFrame, "JDialog对话框");
+    dialog.setModalityType(JDialog.ModalityType.APPLICATION_MODAL);// 设置dialog为程序级模态对话框，只有关闭这个dialog才能操作Jframes
+    dialog.setBounds(650, 600, 200, 150);
+    dialog.add(new JLabel(tf.getText() + "，您好！"));
+    dialog.setVisible(true);
+}
+});
+
+
+
+out.setText("您选择了将来要当：经理");
+
+txt2.setLocation(60,60);
+txt2.setSize(200,30);
+```
 
