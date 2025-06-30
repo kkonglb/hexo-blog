@@ -19,9 +19,12 @@ python --version
 
 查看python版本
 
-## python简介
+## python蜂考知识点
 
-## pyhon环境搭建
+and和or
 
-## Python 3 VScode
+and如果操作数两个有一个是0，结果就是0，否则结果是第二个数。
 
+or如果第一个数是不是0，结果就是第一个数，否则就是第二个数。
+
+![image-20250629191511394](python学习/image-20250629191511394.png)
